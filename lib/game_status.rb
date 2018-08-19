@@ -32,13 +32,15 @@ def full?(board)
   board.none? { |openMoves| openMoves == " "} 
 end
 
-
 def draw?(board)
   #returns true if the board has not been won but is full,
-  if won?(board) == false && full?(board) == true 
+  if won?(board) == false && full?(board) == true
+    true 
   #returns false if the board is not won and the board is not full,
   elsif won?(board) == false && full?(board) == false 
-  #and returns false if the board is won 
-  elsif won?(board) != true
+    false
+    #and returns false if the board is won 
+  elsif won?(board) == true
+    false
   end
 end
