@@ -29,5 +29,5 @@ def position_taken?(board, index)
 end
 
 def full?(board)
-  board.none? { |openMoves| openMoves === " "} 
+  board.none? { |openMoves| openMoves == " "} 
 end
